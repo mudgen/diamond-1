@@ -24,7 +24,7 @@ The `test/diamondTest.js` file gives tests for the `diamondCut` function and the
 
 A diamond reference implementation is more than a reference implementation. It is the boilerplate code you need for a diamond. Also, using a reference implementation ensures your diamond is compliant with EIP-2535 Diamond Standard.
 
-Specifically you can copy and use the [DiamondCutFacet.sol](./blob/master/contracts/facets/DiamondCutFacet.sol) and [DiamondLoupeFacet.sol](https://github.com/mudgen/gas-optimized-diamond-1/blob/master/contracts/facets/DiamondLoupeFacet.sol) contracts as is. They implement the `diamondCut` function and the loupe functions.
+Specifically you can copy and use the [DiamondCutFacet.sol](./contracts/facets/DiamondCutFacet.sol) and [DiamondLoupeFacet.sol](https://github.com/mudgen/gas-optimized-diamond-1/blob/master/contracts/facets/DiamondLoupeFacet.sol) contracts as is. They implement the `diamondCut` function and the loupe functions.
 
 The [Diamond.sol](https://github.com/mudgen/gas-optimized-diamond-1/blob/master/contracts/Diamond.sol) contract could be used as is, or it could be used as a starting point and customized. This contract is the diamond. Its deployment creates a diamond. It's address is a stable diamond address that does not change.
 
