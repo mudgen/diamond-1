@@ -30,7 +30,7 @@ The [Diamond.sol](./contracts/Diamond.sol) contract could be used as is, or it c
 
 The [LibDiamondStorage.sol](./contracts/libraries/LibDiamondStorage.sol) library could be used as is. It shows how to implement Diamond Storage. This contract includes contract ownership which you might want to change if you want to implement DAO-based ownership or other form of contract ownership. Go for it. Diamonds can work with any kind of contract ownership strategy.
 
-The [LibDiamondCut.sol](./contracts/libraries/LibDiamond.sol) library contains an internal function version of `diamondCut` that can be used in the constructor of a diamond or other places.
+The [LibDiamondCut.sol](./contracts/libraries/LibDiamondCut.sol) library contains an internal function version of `diamondCut` that can be used in the constructor of a diamond or other places.
 
 ## Calling Diamond Functions
 
