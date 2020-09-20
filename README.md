@@ -1,14 +1,10 @@
 # Diamond Standard Gas Optimized Diamond
 
-This is the gas-optimized reference implementation for [EIP-2535 Diamond Standard](https://github.com/ethereum/EIPs/issues/2535).
+This is a reference implementation for [EIP-2535 Diamond Standard](https://github.com/ethereum/EIPs/issues/2535). To learn about other reference implementations go here: https://github.com/mudgen/diamond
 
-Specifically this is a gas efficient implementation of the `diamondCut` function. Adding/replacing/removing is optimized to take the least gas.
-
-The loupe functions are NOT gas optimized. In this implementation the `facets`, `facetFunctionSelectors`, `facetAddresses` loupe functions are not meant to be called on-chain and may use too much gas or run out of gas when called in on-chain transactions. In this implementation these functions should be called by off-chain software like websites and Javascript libraries etc., where gas costs do not matter.
+**Note:** In this implementation the loupe functions are NOT gas optimized. The `facets`, `facetFunctionSelectors`, `facetAddresses` loupe functions are not meant to be called on-chain and may use too much gas or run out of gas when called in on-chain transactions. In this implementation these functions should be called by off-chain software like websites and Javascript libraries etc., where gas costs do not matter.
 
 However the `facetAddress` loupe function is gas efficient and can be called in on-chain transactions.
-
-The `diamondCut` implementation avoids storage read and writes. Fits 8 function selectors in a single storage slot. This is a gas optimization.
 
 The `contracts/Diamond.sol` file shows an example of implementing a diamond.
 
@@ -20,15 +16,13 @@ The `contracts/libraries/LibDiamondStorage.sol` file shows how to implement Diam
 
 The `test/diamondTest.js` file gives tests for the `diamondCut` function and the Diamond Loupe functions.
 
-A simpler implementation of a diamond exists here: https://github.com/mudgen/diamond
-
 ## How to Get Started Making Your Diamond
 
 1. The most important thing is reading and understanding the [Diamond Standard](https://github.com/ethereum/EIPs/issues/2535). If something is unclear let me know!
 
-2. The second important thing is using the Diamond Standard reference implementation. You are at the right place because this is the README for the gas-optimized reference implementation.
+2. The second important thing is using a Diamond Standard reference implementation. You are at the right place because this is the README for a diamond reference implementation.
 
-The reference implementation is more than a reference implementation. It is the boilerplate code you need for a diamond. It is tested and it works. Use it. Also, using the reference implementation makes your diamond compliant with the standard.
+A diamond reference implementation is more than a reference implementation. It is the boilerplate code you need for a diamond. Also, using a reference implementation ensures your diamond is compliant with EIP-2535 Diamond Standard.
 
 Specifically you should copy and use the [DiamondCutFacet.sol](https://github.com/mudgen/gas-optimized-diamond-1/blob/master/contracts/facets/DiamondCutFacet.sol) and [DiamondLoupeFacet.sol](https://github.com/mudgen/gas-optimized-diamond-1/blob/master/contracts/facets/DiamondLoupeFacet.sol) contracts as is. They implement the `diamondCut` function and the loupe functions.
 
