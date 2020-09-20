@@ -1,4 +1,4 @@
-# Diamond Standard Gas Optimized Diamond
+# Diamond Standard Reference Implementation
 
 This is a reference implementation for [EIP-2535 Diamond Standard](https://github.com/ethereum/EIPs/issues/2535). To learn about other reference implementations go here: https://github.com/mudgen/diamond
 
