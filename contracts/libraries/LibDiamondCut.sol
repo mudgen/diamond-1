@@ -42,6 +42,7 @@ library LibDiamondCut {
                         selectorCount++;
                     } else {
                         // replace
+                        require(oldFacetAddress != address(this), "LibDiamondCut: Can't remove immutable function");
                         if (oldFacetAddress != newFacetAddress) {
                             // replace old facet address
                             ds.facetAddressAndSelectorPosition[selector].facetAddress = newFacetAddress;
@@ -58,6 +59,7 @@ library LibDiamondCut {
                     if (oldFacetAddressAndSelectorPosition.facetAddress == address(0)) {
                         continue;
                     }
+                    require(oldFacetAddressAndSelectorPosition.facetAddress != address(this), "LibDiamondCut: Can't remove immutable function.");
                     bytes4 lastSelector = ds.selectors[selectorCount - 1];
                     // replace selector with last selector
                     if (oldFacetAddressAndSelectorPosition.selectorPosition != selectorCount - 1) {
