@@ -24,7 +24,7 @@ contract DiamondCutFacet is IDiamondCut {
         bytes calldata _calldata
     ) external override {
         LibDiamondStorage.DiamondStorage storage ds = LibDiamondStorage.diamondStorage();
-        require(msg.sender == ds.contractOwner, "Must own the contract.");
+        require(msg.sender == ds.contractOwner, "DiamondCutFacet: Must own the contract");
         uint256 selectorCount = ds.selectors.length;
         for (uint256 facetIndex; facetIndex < _diamondCut.length; facetIndex++) {
             selectorCount = LibDiamondCut.addReplaceRemoveFacetSelectors(

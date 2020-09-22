@@ -13,17 +13,8 @@ import "../interfaces/IERC165.sol";
 contract DiamondLoupeFacet is IDiamondLoupe, IERC165 {
     // Diamond Loupe Functions
     ////////////////////////////////////////////////////////////////////
-    /// These functions are expected to be called frequently
-    /// by tools. Therefore the return values are tightly
-    /// packed for efficiency. That means no padding with zeros.
-
-    // holder for variables to prevent stack too deep error
-    // See this: https://medium.com/1milliondevs/compilererror-stack-too-deep-try-removing-local-variables-solved-a6bcecc16231
-    struct Vars {
-        uint256 defaultSize;
-        uint256 selectorCount;
-    }
-
+    /// These functions are expected to be called frequently by tools.
+    //
     // struct Facet {
     //     address facetAddress;
     //     bytes4[] functionSelectors;
@@ -44,7 +35,7 @@ contract DiamondLoupeFacet is IDiamondLoupe, IERC165 {
             for (uint256 facetIndex; facetIndex < numFacets; facetIndex++) {
                 if (facets_[facetIndex].facetAddress == facetAddress) {
                     facets_[facetIndex].functionSelectors[numFacetSelectors[facetIndex]] = selector;
-                    // probably will never have more than 255 functions from one facet contract
+                    // probably will never have more than 256 functions from one facet contract
                     require(numFacetSelectors[facetIndex] < 255);
                     numFacetSelectors[facetIndex]++;
                     continueLoop = true;
