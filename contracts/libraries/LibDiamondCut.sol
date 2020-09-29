@@ -24,8 +24,7 @@ library LibDiamondCut {
         IDiamondCut.FacetCut[] memory _diamondCut,
         address _init,
         bytes memory _calldata
-    ) internal {
-        require(_diamondCut.length > 0, "LibDiamondCut: No facets to cut");
+    ) internal {        
         LibDiamondStorage.DiamondStorage storage ds = LibDiamondStorage.diamondStorage();
         uint256 selectorCount = ds.selectors.length;
         for (uint256 facetIndex; facetIndex < _diamondCut.length; facetIndex++) {
