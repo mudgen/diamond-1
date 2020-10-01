@@ -24,7 +24,7 @@ library LibDiamondCut {
         IDiamondCut.FacetCut[] memory _diamondCut,
         address _init,
         bytes memory _calldata
-    ) internal {        
+    ) internal {
         LibDiamondStorage.DiamondStorage storage ds = LibDiamondStorage.diamondStorage();
         uint256 selectorCount = ds.selectors.length;
         for (uint256 facetIndex; facetIndex < _diamondCut.length; facetIndex++) {
@@ -84,9 +84,9 @@ library LibDiamondCut {
                 require(oldFacetAddressAndSelectorPosition.facetAddress != address(0), "LibDiamondCut: Can't remove function that doesn't exist");
                 // only useful if immutable functions exist
                 require(oldFacetAddressAndSelectorPosition.facetAddress != address(this), "LibDiamondCut: Can't remove immutable function.");
-                bytes4 lastSelector = ds.selectors[_selectorCount - 1];
                 // replace selector with last selector
                 if (oldFacetAddressAndSelectorPosition.selectorPosition != _selectorCount - 1) {
+                    bytes4 lastSelector = ds.selectors[_selectorCount - 1];
                     ds.selectors[oldFacetAddressAndSelectorPosition.selectorPosition] = lastSelector;
                     ds.facetAddressAndSelectorPosition[lastSelector].selectorPosition = oldFacetAddressAndSelectorPosition.selectorPosition;
                 }
