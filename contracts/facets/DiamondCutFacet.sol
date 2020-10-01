@@ -7,8 +7,7 @@ pragma experimental ABIEncoderV2;
 /******************************************************************************/
 
 import "../interfaces/IDiamondCut.sol";
-import "../libraries/LibDiamondStorage.sol";
-import "../libraries/LibDiamondCut.sol";
+import "../libraries/LibDiamond.sol";
 
 contract DiamondCutFacet is IDiamondCut {
     // Standard diamondCut external function
@@ -23,11 +22,10 @@ contract DiamondCutFacet is IDiamondCut {
         address _init,
         bytes calldata _calldata
     ) external override {
-        LibDiamondStorage.DiamondStorage storage ds = LibDiamondStorage.diamondStorage();
-        require(msg.sender == ds.contractOwner, "DiamondCutFacet: Must own the contract");        
-        uint256 selectorCount = ds.selectors.length;
+        LibDiamond.enforceIsContractOwner();
+        uint256 selectorCount = LibDiamond.diamondStorage().selectors.length;
         for (uint256 facetIndex; facetIndex < _diamondCut.length; facetIndex++) {
-            selectorCount = LibDiamondCut.addReplaceRemoveFacetSelectors(
+            selectorCount = LibDiamond.addReplaceRemoveFacetSelectors(
                 selectorCount,
                 _diamondCut[facetIndex].facetAddress,
                 _diamondCut[facetIndex].action,
@@ -35,6 +33,6 @@ contract DiamondCutFacet is IDiamondCut {
             );
         }
         emit DiamondCut(_diamondCut, _init, _calldata);
-        LibDiamondCut.initializeDiamondCut(_init, _calldata);
+        LibDiamond.initializeDiamondCut(_init, _calldata);
     }
 }
