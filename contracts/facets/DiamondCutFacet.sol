@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.7.1;
+pragma solidity ^0.7.6;
 pragma experimental ABIEncoderV2;
 
 /******************************************************************************\
@@ -10,7 +10,7 @@ pragma experimental ABIEncoderV2;
 import "../interfaces/IDiamondCut.sol";
 import "../libraries/LibDiamond.sol";
 
-contract DiamondCutFacet is IDiamondCut {    
+contract DiamondCutFacet is IDiamondCut {
     /// @notice Add/replace/remove any number of functions and optionally execute
     ///         a function with delegatecall
     /// @param _diamondCut Contains the facet addresses and function selectors
@@ -23,16 +23,6 @@ contract DiamondCutFacet is IDiamondCut {
         bytes calldata _calldata
     ) external override {
         LibDiamond.enforceIsContractOwner();
-        uint256 selectorCount = LibDiamond.diamondStorage().selectors.length;
-        for (uint256 facetIndex; facetIndex < _diamondCut.length; facetIndex++) {
-            selectorCount = LibDiamond.addReplaceRemoveFacetSelectors(
-                selectorCount,
-                _diamondCut[facetIndex].facetAddress,
-                _diamondCut[facetIndex].action,
-                _diamondCut[facetIndex].functionSelectors
-            );
-        }
-        emit DiamondCut(_diamondCut, _init, _calldata);
-        LibDiamond.initializeDiamondCut(_init, _calldata);
+        LibDiamond.diamondCut(_diamondCut, _init, _calldata);
     }
 }
