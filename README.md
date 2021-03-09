@@ -68,7 +68,7 @@ If you need help or would like to discuss diamonds then send me a message [on tw
 
 ## Author
 
-The diamond standard and this implementation were written by Nick Mudge.
+This example implementation was written by Nick Mudge.
 
 Contact:
 
