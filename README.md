@@ -1,4 +1,4 @@
-# Diamond Implementation
+# Diamond-1 Implementation
 
 This is an example of an implementation for [EIP-2535 Diamond Standard](https://github.com/ethereum/EIPs/issues/2535). To learn about other implementations go here: https://github.com/mudgen/diamond
 
