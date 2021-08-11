@@ -18,7 +18,7 @@ The `test/diamondTest.js` file gives tests for the `diamondCut` function and the
 
 ## How to Get Started Making Your Diamond
 
-1. Reading and understand [EIP-2535 Diamonds](https://github.com/ethereum/EIPs/issues/2535). If something is unclear let me know!
+1. Reading and understand [EIP-2535 Diamonds](https://eips.ethereum.org/EIPS/eip-2535). If something is unclear let me know!
 
 2. Use a diamond reference implementation. You are at the right place because this is the README for a diamond reference implementation.
 
