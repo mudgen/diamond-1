@@ -1,6 +1,6 @@
 # Diamond-1 Implementation
 
-This is a reference implementation for [EIP-2535 Diamonds](https://github.com/ethereum/EIPs/issues/2535). To learn about other implementations go here: https://github.com/mudgen/diamond
+This is a reference implementation for [EIP-2535 Diamonds](https://eips.ethereum.org/EIPS/eip-2535). To learn about other implementations go here: https://github.com/mudgen/diamond
 
 **Note:** In this implementation the loupe functions are NOT gas optimized. The `facets`, `facetFunctionSelectors`, `facetAddresses` loupe functions are not meant to be called on-chain and may use too much gas or run out of gas when called in on-chain transactions. In this implementation these functions should be called by off-chain software like websites and Javascript libraries etc., where gas costs do not matter.
 
@@ -56,7 +56,8 @@ If you need help or would like to discuss diamonds then send me a message [on tw
 
 ## Useful Links
 
-1. [EIP-2535 Diamonds discussion](https://github.com/ethereum/EIPs/issues/2535)
+1. [EIP-2535 Diamonds](https://eips.ethereum.org/EIPS/eip-2535)
+1. [Introduction to the Diamond Standard, EIP-2535 Diamonds](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard)
 1. [Understanding Diamonds on Ethereum](https://dev.to/mudgen/understanding-diamonds-on-ethereum-1fb)
 1. [Solidity Storage Layout For Proxy Contracts and Diamonds](https://medium.com/1milliondevs/solidity-storage-layout-for-proxy-contracts-and-diamonds-c4f009b6903)
 1. [New Storage Layout For Proxy Contracts and Diamonds](https://medium.com/1milliondevs/new-storage-layout-for-proxy-contracts-and-diamonds-98d01d0eadb)
