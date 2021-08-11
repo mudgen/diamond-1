@@ -57,13 +57,14 @@ If you need help or would like to discuss diamonds then send me a message [on tw
 ## Useful Links
 
 1. [EIP-2535 Diamonds](https://eips.ethereum.org/EIPS/eip-2535)
-1. [Introduction to the Diamond Standard, EIP-2535 Diamonds](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard)
-1. [Understanding Diamonds on Ethereum](https://dev.to/mudgen/understanding-diamonds-on-ethereum-1fb)
-1. [Solidity Storage Layout For Proxy Contracts and Diamonds](https://medium.com/1milliondevs/solidity-storage-layout-for-proxy-contracts-and-diamonds-c4f009b6903)
-1. [New Storage Layout For Proxy Contracts and Diamonds](https://medium.com/1milliondevs/new-storage-layout-for-proxy-contracts-and-diamonds-98d01d0eadb)
-1. [Diamond Setter](https://github.com/lampshade9909/DiamondSetter)
-1. [Upgradeable smart contracts using the EIP-2535 Diamonds](https://hiddentao.com/archives/2020/05/28/upgradeable-smart-contracts-using-diamond-standard)
-1. [buidler-deploy supports diamonds](https://github.com/wighawag/buidler-deploy/)
+2. [diamond-1-hardhat](https://github.com/mudgen/diamond-1-hardhat)
+3. [Introduction to the Diamond Standard, EIP-2535 Diamonds](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard)
+4. [Understanding Diamonds on Ethereum](https://dev.to/mudgen/understanding-diamonds-on-ethereum-1fb)
+5. [Solidity Storage Layout For Proxy Contracts and Diamonds](https://medium.com/1milliondevs/solidity-storage-layout-for-proxy-contracts-and-diamonds-c4f009b6903)
+6. [New Storage Layout For Proxy Contracts and Diamonds](https://medium.com/1milliondevs/new-storage-layout-for-proxy-contracts-and-diamonds-98d01d0eadb)
+7. [Diamond Setter](https://github.com/lampshade9909/DiamondSetter)
+8. [Upgradeable smart contracts using the EIP-2535 Diamonds](https://hiddentao.com/archives/2020/05/28/upgradeable-smart-contracts-using-diamond-standard)
+9. [buidler-deploy supports diamonds](https://github.com/wighawag/buidler-deploy/)
 
 ## Author
 
