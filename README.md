@@ -52,7 +52,7 @@ string result = MyUsefulFacet(diamondAddress).getResult()
 
 ## Get Help and Join the Community
 
-If you need help or would like to discuss diamonds then send me a message [on twitter](https://twitter.com/mudgen), or [email me](mailto:nick@perfectabstractions.com). Or join the [Diamond Standard Discord server](https://discord.gg/kQewPw2).
+If you need help or would like to discuss diamonds then send me a message [on twitter](https://twitter.com/mudgen), or [email me](mailto:nick@perfectabstractions.com). Or join the [Diamond Discord server](https://discord.gg/kQewPw2).
 
 ## Useful Links
 
